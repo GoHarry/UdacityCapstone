@@ -14,7 +14,7 @@ pipeline {
               steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
                 sh '''
-                docker build -t sonubedi/capstone .
+                docker build -t sonubedi/udacitycapstone .
                 '''
                 }
               }
@@ -24,7 +24,7 @@ pipeline {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
                   sh '''
                     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-                    docker push sonubedi/capstone
+                    docker push sonubedi/udacitycapstone
                   '''
                 }
               }

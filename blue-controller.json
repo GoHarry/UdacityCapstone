@@ -22,7 +22,7 @@
             "containers":[
                {
                   "name":"blue",
-                  "image":"sonubedi/capstone",
+                  "image":"sonubedi/udacitycapstone",
                   "imagePullPolicy": "Always",
                   "ports":[
                      {
