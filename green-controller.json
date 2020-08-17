@@ -23,6 +23,7 @@
                {
                   "name":"green",
                   "image":"sonubedi/capstone",
+                  "imagePullPolicy": "Always",
                   "ports":[
                      {
                         "name":"http-server",
