@@ -7,14 +7,16 @@ pipeline {
      stages {
          stage('Linting') {
               steps {
-                sh 'tidy -q -e *.html'
+                sh 'tidy -q -e blue/blue-index.html'
+                sh 'tidy -q -e green/green-index.html'
               }
             }
             stage('Build image') {
               steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
                 sh '''
-                docker build -t sonubedi/udacitycapstone .
+                docker build -t sonubedi/bluecapstone blue/.
+                docker build -t sonubedi/greencapstone green/.
                 '''
                 }
               }
@@ -24,7 +26,8 @@ pipeline {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD']]){
                   sh '''
                     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-                    docker push sonubedi/udacitycapstone:latest
+                    docker push sonubedi/bluecapstone:latest
+                    docker push sonubedi/greencapstone:latest
                   '''
                 }
               }
