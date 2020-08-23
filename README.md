@@ -32,17 +32,17 @@
 * /Images-of-result-deploy : Screenshot the result of deploy.
 * /Create-clusters-pipeline : CloudFormation Script of Cluster Pipeline file 
 * /Deploy-containers-pipeline : Deployment Script of Containers Pipeline file
-* Jenkinsfile : Jenkinsfile for Creating Pipeline
-* Dockerfile : Dockerfile for building the image 
+* Jenkinsfile : Jenkinsfile to create Pipeline
+* Dockerfile : Dockerfile to build the image 
 * green-controller.json : Create a replication controller green pod
 * green-service.json : Create the green service
 * blue-controller.json : Create a replication controller blue pod
 * blue-service.json : Create the blue service
 * blue/index.html : Web site Index file with blue background
-* green/index.html : Web site Index file with gree background
+* green/index.html : Web site Index file with green background
 ```
 
 ## Run the project:
 ```sh
-* Please follow to steps of screenshot in Images-of-result-deploy folder.
+* Please follow along the screenshots in Screenshot folder. Link for the output URL is given in screenshots folder in a text file.
 ```
