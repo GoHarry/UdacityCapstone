@@ -7,8 +7,8 @@ pipeline {
      stages {
          stage('Linting') {
               steps {
-                sh 'tidy -q -e blue/blue-index.html'
-                sh 'tidy -q -e green/green-index.html'
+                sh 'tidy -q -e blue/index.html'
+                sh 'tidy -q -e green/index.html'
               }
             }
             stage('Build image') {
